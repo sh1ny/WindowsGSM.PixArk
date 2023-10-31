@@ -22,7 +22,7 @@ namespace WindowsGSM.Plugins
             author = "sh1ny",
             description = "WindowsGSM plugin for supporting ArkSurvivalAscended Dedicated Server",
             version = "1.0",
-            url = "https://github.com/sh1ny/WindowsGSM.ArkSurvivalAscended/", // Github repository link (Best practice)
+             url = "https://github.com/sh1ny/WindowsGSM.PixArk", // Github repository link (Best practice)
             color = "#34c9eb" // Color Hex
         };
 
@@ -71,12 +71,12 @@ namespace WindowsGSM.Plugins
             var param = new StringBuilder();
 
             if (!string.IsNullOrWhiteSpace(_serverData.ServerMap))
-                param.Append($"{_serverData.ServerMap} ");
+                param.Append($"{_serverData.ServerMap}");
 
             param.Append("?listen");
 
             if (!string.IsNullOrWhiteSpace(_serverData.ServerName))
-                param.Append($"?SessionName=\"\"\"{_serverData.ServerName}\"\"\"");
+                param.Append($"?SessionName=\"{_serverData.ServerName}\"");
 
             if (!string.IsNullOrWhiteSpace(_serverData.ServerIP))
                 param.Append($"?MultiHome={_serverData.ServerIP}");
